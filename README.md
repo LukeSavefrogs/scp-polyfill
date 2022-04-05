@@ -1,5 +1,5 @@
 # scp-polyfill
-Polyfill for SCP (now on his way to deprecation) using sftp and rsync
+Polyfill for SCP ([now on his way to deprecation](https://www.openssh.com/txt/release-8.0)) using sftp and rsync
 
 ## Features
 - Full coverage for both `sftp` and `rsync` commands. (see the corresponding voice in [the docs](#default-program))
