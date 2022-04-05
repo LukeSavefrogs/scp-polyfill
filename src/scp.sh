@@ -111,7 +111,6 @@ scp () {
 				shift;
 			;;
 			--set-command-preference*) # Proprietary option to choose command.
-				echo "$1";
 				_target_command="${1#*=}";
 				if [[ -z "${_target_command//[[:blank:]]/}" ]]; then
 					printf "ERROR: You MUST provide a command preference.\n" >&2;
@@ -197,10 +196,10 @@ scp () {
 			connection_regex="^ *(([-a-zA-Z0-9_. ]+@)?[-a-zA-Z0-9_.]+:[[:print:]]+) *$";
 			# if [[ "${_source_path}" =~ \(\([-a-zA-Z0-9_.\ ]+@\)?[-a-zA-Z0-9_.]+:[-\~/\"\'a-zA-Z0-9_.:]+\) ]]; then
 			if [[ "${_source_path}" =~ ${connection_regex} ]]; then
-				printf "DEBUG: Detected DOWNLOAD.\n" >&2;
+				# printf "DEBUG: Detected DOWNLOAD.\n" >&2;
 				_command_string="${_target_command} ${_sftp_options[*]} ${_source_path} ${_destination_path}";
 			else 
-				printf "DEBUG: Detected UPLOAD.\n" >&2;
+				# printf "DEBUG: Detected UPLOAD.\n" >&2;
 				_command_string="${_target_command} ${_sftp_options[*]} ${_destination_path} <<< 'put ${_source_path}'";
 			fi
 		;;
