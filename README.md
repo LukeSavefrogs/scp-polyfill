@@ -1,10 +1,10 @@
 # scp-polyfill
-Polyfill for SCP ([now on his way to deprecation](https://www.openssh.com/txt/release-8.0)) using sftp and rsync
+Polyfill for SCP ([now on its way to deprecation](https://www.openssh.com/txt/release-8.0)) using sftp and rsync.
 
-## Features
+## :sparkles: Features
 - Full coverage for both `sftp` and `rsync` commands. (see the corresponding voice in [the docs](#default-program))
 
-## SCP supported options
+## :hammer_and_wrench: SCP supported options
 As of _April 05 2022_ the supported options are:
 <!-- https://www.tablesgenerator.com/markdown_tables -->
 |          Parameter          	|    Type    	|                                           Description                                           	|
@@ -15,12 +15,12 @@ As of _April 05 2022_ the supported options are:
 | **`-r` (or `--recursive`)** 	| _OPTIONAL_ 	| Recursively copy entire directories.                                                            	|
 | **`-v` (or `--verbose`)**   	| _OPTIONAL_ 	| Verbose mode.                                                                                   	|
 
-## How to use
+## :books: How to use
 #### 1. Source it
 ```console
 source src/scp.sh
 ```
-> **WARNING!**
+> :warning: **WARNING!**
 > 
 > Note that this way you will temporarily overwrite the "legacy" `scp`!  
 > Restarting the shell will make things go back to normal.
